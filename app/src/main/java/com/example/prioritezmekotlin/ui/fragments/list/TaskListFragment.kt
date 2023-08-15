@@ -9,6 +9,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.prioritezmekotlin.R
 import com.example.prioritezmekotlin.data.db.Task
@@ -31,10 +32,10 @@ class TaskListFragment : Fragment() {
 
         val taskAdapter = TaskAdapter(
             taskComparator = TaskComparator(),
-            onPriorityUp = {},
-            onPriorityDown = {},
-            onTaskDone = {},
-            onDelete = {},
+            onPriorityUp = { viewModel.increasePriority(it) },
+            onPriorityDown = { viewModel.decreasePriority(it) },
+            onTaskDone = { viewModel.donePriority(it) },
+            onDelete = { viewModel.deleteTask(it) },
             onEdit = {}
         )
         viewLifecycleOwner.lifecycleScope.launch {
@@ -48,6 +49,7 @@ class TaskListFragment : Fragment() {
         binding.recycler.apply {
             adapter = taskAdapter
             layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+            itemAnimator = null
         }
 
         return binding.root
