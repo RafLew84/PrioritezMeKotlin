@@ -1,14 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".ui.fragments.add.TaskAddFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/titleInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="2dp"
+        android:hint="Tytuł">
 
-</FrameLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:inputType="textShortMessage"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/descriptionInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="2dp"
+        android:layout_height="0dp"
+        android:layout_weight="1f"
+        android:hint="Opis">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:inputType="textMultiLine"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_weight=".5f"
+            android:layout_height="wrap_content"
+            app:strokeColor="@color/black"
+            android:elevation="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginTop="2dp"
+            app:cardCornerRadius="4dp">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioHigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="WYSOKI" />
+
+            <RadioButton
+                android:id="@+id/radioNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="NORMALNY" />
+
+            <RadioButton
+                android:id="@+id/radioLow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="NISKI" />
+
+            <RadioButton
+                android:id="@+id/radioDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="WYKONANY" />
+        </RadioGroup>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_weight=".5f"
+            android:layout_height="match_parent"
+            app:strokeColor="@color/black"
+            android:elevation="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="2dp"
+            app:cardCornerRadius="4dp">
+        <CheckBox
+            android:id="@+id/checkbox_meat"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:text="Czy wykonane"
+            android:textSize="20sp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save"
+        android:layout_width="0dp"
+        android:layout_weight=".5f"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="1dp"
+        android:text="Zapisz"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back"
+        android:layout_width="0dp"
+        android:layout_weight=".5f"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="4dp"
+        style="?attr/materialButtonOutlinedStyle"
+        android:text="Wróć"/>
+    </LinearLayout>
+
+
+</LinearLayout>
