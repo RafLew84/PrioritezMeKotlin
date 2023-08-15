@@ -9,6 +9,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.prioritezmekotlin.R
@@ -50,6 +51,11 @@ class TaskListFragment : Fragment() {
             adapter = taskAdapter
             layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
             itemAnimator = null
+        }
+
+        binding.addFab.setOnClickListener {
+            val action = TaskListFragmentDirections.actionTaskListFragmentToTaskAddFragment()
+            Navigation.findNavController(requireView()).navigate(action)
         }
 
         return binding.root
