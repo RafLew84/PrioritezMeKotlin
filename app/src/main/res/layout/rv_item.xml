@@ -24,13 +24,13 @@
                 android:id="@+id/title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1f"
+                android:layout_weight="1"
                 android:background="#B093E6"
                 android:gravity="center"
                 android:padding="4dp"
                 android:text="Przeprowadź Ankietę Użytkowników"
                 android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:textSize="16sp" />
 
             <ImageView
                 android:id="@+id/priorityIcon"
@@ -38,20 +38,21 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:scaleType="center"
-                android:paddingEnd="10dp"
+                android:paddingEnd="4dp"
                 android:background="#B093E6"
-                android:scaleX="1.9f"
-                android:scaleY="1.9f"
+                android:scaleX="1"
+                android:scaleY="1"
                 android:src="@drawable/ic_circle"
                 android:contentDescription="TODO" />
         </LinearLayout>
 
         <TextView
+            android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="4dp"
             android:text="Optymalizuj SEO strony internetowej, aby poprawić pozycje w wynikach wyszukiwania i zwiększyć ruch organiczny. Przeprowadź badania słów kluczowych, aktualizuj meta tagi i wdroż na stronie najlepsze praktyki SEO."
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/overviewRecyclerViewCarName" />
@@ -69,7 +70,7 @@
                     android:id="@+id/priorityUp"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="0dp"
-                    android:layout_weight=".25f"
+                    android:layout_weight=".25"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="4dp"
@@ -81,7 +82,7 @@
                     android:id="@+id/done"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="0dp"
-                    android:layout_weight=".25f"
+                    android:layout_weight=".25"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
@@ -93,7 +94,7 @@
                     android:id="@+id/priorityDown"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="0dp"
-                    android:layout_weight=".25f"
+                    android:layout_weight=".25"
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
                     android:layout_height="wrap_content"
@@ -105,7 +106,7 @@
                     android:id="@+id/delete"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="0dp"
-                    android:layout_weight=".25f"
+                    android:layout_weight=".25"
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="8dp"
                     android:layout_height="wrap_content"
