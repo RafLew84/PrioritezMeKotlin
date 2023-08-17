@@ -64,7 +64,7 @@ object DataProvider {
         "Twórz interaktywne prototypy dla nowej aplikacji, uwzględniając przyjazny dla użytkownika design i intuicyjną nawigację. Testuj prototypy z potencjalnymi użytkownikami, aby uzyskać opinię i walidację."
     )
 
-    val tasks = (0..10).map { Task(
+    val tasks = (0..1).map { Task(
         title = titles.random(),
         description = descriptions.random(),
         priority = Priority.values().random()

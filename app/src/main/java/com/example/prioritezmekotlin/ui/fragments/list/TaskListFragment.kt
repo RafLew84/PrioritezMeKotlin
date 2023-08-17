@@ -37,7 +37,10 @@ class TaskListFragment : Fragment() {
             onPriorityDown = { viewModel.decreasePriority(it) },
             onTaskDone = { viewModel.donePriority(it) },
             onDelete = { viewModel.deleteTask(it) },
-            onEdit = {}
+            onEdit = {
+                val action = TaskListFragmentDirections.actionTaskListFragmentToTaskUpdateFragment(it)
+                Navigation.findNavController(requireView()).navigate(action)
+            }
         )
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED){
