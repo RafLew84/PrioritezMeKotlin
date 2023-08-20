@@ -6,7 +6,7 @@ Key elements utilized in the application include:
 
 - Application implemented following the MVVM design pattern.
 - The application is developed using Kotlin language.
-- The user interface is based on XML layouts with Fragments (Kotlin, Java).
+- The user interface is based on XML layouts with Fragments.
 - The app employs ROOM for data storage.
 - StateFlow is used for handling data updates.
 - Kotlin Coroutines are employed for asynchronous data processing.
